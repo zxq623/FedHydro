@@ -1,0 +1,39 @@
+INFO Worker-172.17.0.4@16:07:45 : Worker version: 0.761.
+INFO Worker-172.17.0.4@16:07:45 : Worker started with network type 'FCNet'.
+INFO Worker-172.17.0.4@16:12:39 : Job submission received. Node assigned node_id(1)
+INFO Worker-172.17.0.4@16:12:41 : ACK job submission.
+INFO Worker-172.17.0.4@16:12:45 : Request 01: (6)
+	Requests List:
+		--> Req.Setting
+		--> Req.Model
+		--> Req.Optimizer
+		--> Req.Data_Package
+		--> Req.Other_Stuff
+		--> Req.Extra_Content
+INFO Worker-172.17.0.4@16:12:45 : ETA: (660.2226457595825)
+INFO Worker-172.17.0.4@16:12:45 : Ack package, type: (Version)
+INFO Worker-172.17.0.4@16:12:45 : Ack package, type: (net_setting)
+INFO Worker-172.17.0.4@16:12:45 : Ack package, type: (net_model)
+INFO Worker-172.17.0.4@16:12:45 : Ack package, type: (misc_package)
+INFO Worker-172.17.0.4@16:12:45 : Ack package, type: (extra_package)
+INFO Worker-172.17.0.4@16:12:45 : Ack package, type: (net_optimizer)
+INFO Worker-172.17.0.4@16:12:46 : Ack package, type: (data_package)
+INFO Worker-172.17.0.4@16:12:46 : Request 01: ([<Req.Transfer: 'Transfer'>, <Req.Data_Content: 'Samples'>]).
+INFO Worker-172.17.0.4@16:12:46 : ETA: (660.2226457595825)
+INFO Worker-172.17.0.4@16:12:50 : Ack package, type: (net_transfer)
+INFO Worker-172.17.0.4@16:12:53 : Ack package, type: (ReadyType)
+INFO Worker-172.17.0.4@16:12:53 : Ack package, type: (ReadyType)
+INFO Worker-172.17.0.4@16:12:54 : Ack package, type: (ReadyType)
+INFO Worker-172.17.0.4@16:12:54 : Ack package, type: (ReadyType)
+INFO Worker-172.17.0.4@16:12:56 : Ack package, type: (ReadyType)
+INFO Worker-172.17.0.4@16:12:57 : Ack package, type: (data_content)
+INFO Worker-172.17.0.4@16:12:58 : Request 01: ([]).
+INFO Worker-172.17.0.4@16:12:58 : ETA: (660.2226457595825)
+INFO Worker-172.17.0.4@16:12:58 : Submit stage complete, Total bytes sent: 1508
+INFO Worker-172.17.0.4@16:12:58 : Submit stage complete, Total bytes read: 77764273
+INFO Worker-172.17.0.4@16:12:58 : Synchronize timeline with cluster.
+INFO Worker-172.17.0.4@16:13:00 : Execution process started.
+INFO Worker-172.17.0.4@01:13:03 : Execution complete, time:32403.092711925507
+INFO Worker-172.17.0.4@01:13:03 : Execution stage complete, Total bytes sent: 27543919
+INFO Worker-172.17.0.4@01:13:03 : Execution stage complete, Total bytes read: 297772539
+INFO Worker-172.17.0.4@01:13:03 : Execution process exited.

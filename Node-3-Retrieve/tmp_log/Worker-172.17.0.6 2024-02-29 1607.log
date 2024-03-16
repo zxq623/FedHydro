@@ -1,0 +1,34 @@
+INFO Worker-172.17.0.6@16:07:22 : Worker version: 0.761.
+INFO Worker-172.17.0.6@16:07:22 : Worker started with network type 'FCNet'.
+INFO Worker-172.17.0.6@16:12:39 : Job submission received. Node assigned node_id(3)
+INFO Worker-172.17.0.6@16:12:41 : ACK job submission.
+INFO Worker-172.17.0.6@16:12:45 : Request 01: (6)
+	Requests List:
+		--> Req.Setting
+		--> Req.Model
+		--> Req.Optimizer
+		--> Req.Data_Package
+		--> Req.Other_Stuff
+		--> Req.Extra_Content
+INFO Worker-172.17.0.6@16:12:45 : ETA: (660.2226457595825)
+INFO Worker-172.17.0.6@16:12:45 : Ack package, type: (Version)
+INFO Worker-172.17.0.6@16:12:45 : Ack package, type: (net_setting)
+INFO Worker-172.17.0.6@16:12:45 : Ack package, type: (net_model)
+INFO Worker-172.17.0.6@16:12:45 : Ack package, type: (net_optimizer)
+INFO Worker-172.17.0.6@16:12:45 : Ack package, type: (data_package)
+INFO Worker-172.17.0.6@16:12:45 : Ack package, type: (misc_package)
+INFO Worker-172.17.0.6@16:12:45 : Ack package, type: (extra_package)
+INFO Worker-172.17.0.6@16:12:45 : Request 01: ([<Req.Data_Content: 'Samples'>, <Req.Transfer: 'Transfer'>]).
+INFO Worker-172.17.0.6@16:12:45 : ETA: (660.2226457595825)
+INFO Worker-172.17.0.6@16:12:51 : Ack package, type: (data_content)
+INFO Worker-172.17.0.6@16:12:52 : Ack package, type: (net_transfer)
+INFO Worker-172.17.0.6@16:12:53 : Request 01: ([]).
+INFO Worker-172.17.0.6@16:12:53 : ETA: (660.2226457595825)
+INFO Worker-172.17.0.6@16:12:53 : Submit stage complete, Total bytes sent: 1508
+INFO Worker-172.17.0.6@16:12:53 : Submit stage complete, Total bytes read: 77763586
+INFO Worker-172.17.0.6@16:12:53 : Synchronize timeline with cluster.
+INFO Worker-172.17.0.6@16:13:00 : Execution process started.
+INFO Worker-172.17.0.6@01:12:58 : Execution complete, time:32398.10058093071
+INFO Worker-172.17.0.6@01:12:58 : Execution stage complete, Total bytes sent: 27543793
+INFO Worker-172.17.0.6@01:12:58 : Execution stage complete, Total bytes read: 297772547
+INFO Worker-172.17.0.6@01:12:58 : Execution process exited.
