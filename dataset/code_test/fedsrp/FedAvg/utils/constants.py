@@ -1,0 +1,1 @@
+path = "/root/pythonProject/dataset/series_data"
