@@ -16,6 +16,6 @@
 - Extract the trained model "*.model" from the result file named "Node-7-Retrieve"
   *specific instructions can be found at https://github.com/EngineerDDP/Parallel-SGD*
 
-  ## 02. Test
-  - Generate controlled experiment models using the code provided in ./dataset/code_test/fedsrp/chapter4_exp2.py and ./dataset/code_test/fedsrp/FedAvg
-  - Test related parameters using the code provided in ./dataset/code_test/fedsrp/chapter4_exp2_updated.py
+## 02. Test
+- Generate controlled experiment models using the code provided in ./dataset/code_test/fedsrp/chapter4_exp2.py and ./dataset/code_test/fedsrp/FedAvg
+- Test related parameters using the code provided in ./dataset/code_test/fedsrp/chapter4_exp2_updated.py
