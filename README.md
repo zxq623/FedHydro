@@ -14,6 +14,7 @@
 - Execute ./worker.py on each worker node
 - Run the corresponding submitter program *_submit_*.py
 - Extract the trained model "*.model" from the result file named "Node-7-Retrieve"
+
   *specific instructions can be found at https://github.com/EngineerDDP/Parallel-SGD*
 
 ## 02. Test
