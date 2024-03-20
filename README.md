@@ -3,6 +3,7 @@
 ## 00. Data preparation
 ### Download the dataset
 - Download the CAMELS dataset from https://ral.ucar.edu/solutions/products/camels
+- Choose one region and select seven basins from it as data-rich watersheds, and one as a data-scarce watershed.
 - Place related files into the directories ./dataset/series_data/discharge_data and ./dataset/series_data/forcing_data
 ### Merge the dataset
 - Execute ./dataset/series_data/utils/generate_data.py to generate the merged dataset
