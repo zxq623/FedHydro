@@ -48,7 +48,7 @@ class HydroDataMeta:
 
 
 if __name__ == '__main__':
-    path = "D:\\河海大学\\研究课题\\研究课题\\实验相关\\PSGD\\Parallel-SGD\\dataset\\code_test\\fed_meta_ref\\MAML\\data"
+    path = "D:\\ \\研究课题\\研究课题\\实验相关\\PSGD\\Parallel-SGD\\dataset\\code_test\\fed_meta_ref\\MAML\\data"
     hydro_data = HydroDataMeta(path)
     unit_code = "01"
     train_x, train_y, test_x, test_y = hydro_data.load_data(unit_code)
