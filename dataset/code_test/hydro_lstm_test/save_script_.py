@@ -122,7 +122,7 @@ def save_csv(basin_ids, save_path, global_model_name):
     # 写入列表头
     csv_writer.writerow(["Basin Id", "  ", "NSE", "RMSE", "MAE"])
     for basin_id in basin_ids:
-        single_model_name = 'D:/河海大学/研究课题/水文预报/课题实验/Parallel-SGD/dataset/code_test/' \
+        single_model_name = 'D:/ /研究课题/水文预报/课题实验/Parallel-SGD/dataset/code_test/' \
                             'single_model/lstm_hydro_'+str(basin_id)+'.model'
 
         csv_writer.writerow([str(basin_id), "", "", "", ""])
@@ -201,7 +201,7 @@ def gen_single_basin_pred(basin_id):
     }
     plt.rcParams.update(config)
 
-    path = 'D:/河海大学/研究课题/研究课题/实验相关/PSGD/Parallel-SGD/dataset/code_test/hydro_lstm_test/'
+    path = 'D:/ /研究课题/研究课题/实验相关/PSGD/Parallel-SGD/dataset/code_test/hydro_lstm_test/'
     getHydroData = GetHydroData(basin_id, sequence_length)
     train_x, train_y, val_x, val_y, test_x, test_y = getHydroData.get_data()
     single_lstm_model = nn.model.Model.load(path + 'single_lstm_model/lstm_hydro_' + str(basin_id) + '.model')
@@ -279,7 +279,7 @@ def gen_fed_hydro_two_basin_pred(basin_ids):
     # }
     # plt.rcParams.update(config)
 
-    path = 'D:/河海大学/研究课题/研究课题/实验相关/PSGD/Parallel-SGD/dataset/code_test/hydro_lstm_test/fed_model_retrain/'
+    path = 'D:/ /研究课题/研究课题/实验相关/PSGD/Parallel-SGD/dataset/code_test/hydro_lstm_test/fed_model_retrain/'
 
     # 流域1
     getHydroData1 = GetHydroData(basin_ids[0], sequence_length)
@@ -344,7 +344,7 @@ def gen_fed_hydro_two_basin_pred(basin_ids):
 # 生成不同流域数量，不同本地epoch联邦模型的NSE
 def gen_n_basins_fed_model_table(global_fed_model, scene_num, in_basin_ids, without_basin_ids,
                                  local_N1, local_N2, local_N3):
-    save_path = "D:\\河海大学\\研究课题\\研究课题\\实验相关\\PSGD\\Parallel-SGD\\dataset\\code_test\\" \
+    save_path = "D:\\ \\研究课题\\研究课题\\实验相关\\PSGD\\Parallel-SGD\\dataset\\code_test\\" \
                 "hydro_lstm_test\\csv_res\\n_basins_fed_model_res_51015.csv"
 
     # 1. 创建文件对象
@@ -645,7 +645,7 @@ def cal_nse_rmse_rae(test_y, predict_y):
 
 
 def gen_4units_model_result(unit_code, node_count, fed_model_name, single_model_path):
-    path = 'D:/河海大学/研究课题/研究课题/实验相关/PSGD/Parallel-SGD/dataset/code_test/hydro_lstm_test/fed_model/'
+    path = 'D:/ /研究课题/研究课题/实验相关/PSGD/Parallel-SGD/dataset/code_test/hydro_lstm_test/fed_model/'
     # fed_model_name = "./fed_model/MODEL-fed_hydro_unit" + str(unit_code) + "_12basins_t30_210-N(11).model"
     basin_ids = get_basin_ids(unit_code)
     basin_ids = basin_ids[:node_count]
@@ -1039,7 +1039,7 @@ if __name__ == '__main__':
     # fusion_feature_test("01013500")
 
     """验证单个模型的预测效果"""
-    # model_path = "D:\\河海大学\\研究课题\\研究课题\\实验相关\\PSGD\\Parallel-SGD\\dataset\\" \
+    # model_path = "D:\\ \\研究课题\\研究课题\\实验相关\\PSGD\\Parallel-SGD\\dataset\\" \
     #              "code_test\\hydro_lstm_test\\single_lstm_model\\01\\lstm_hydro_model_unit01_01013500.model"
     # baasin_id = "01013500"
     # get_trained_single_model_predict(model_path, baasin_id)
@@ -1062,7 +1062,7 @@ if __name__ == '__main__':
     # epoch = 70
     # gen_unit_single_model(units, node_count, epoch)
 
-    # f = open('D:/河海大学/研究课题/水文预报/课题实验/Parallel-SGD/dataset/code_test
+    # f = open('D:/ /研究课题/水文预报/课题实验/Parallel-SGD/dataset/code_test
     # /test_result/6basins_210.csv', 'w', encoding='utf-8', newline="")
     # csv_writer = csv.writer(f)
     # csv_writer.writerow(["basin_id", "  ", "NSE", "RMSE", "MAE"])
@@ -1077,10 +1077,10 @@ if __name__ == '__main__':
     # print(RMSE)
     # print(MAE)
     # print(MAPE)
-    # save_path = 'D:/河海大学/研究课题/水文预报/课题实验/Parallel-SGD/dataset/code_test/test_result/6basins_210.csv'
+    # save_path = 'D:/ /研究课题/水文预报/课题实验/Parallel-SGD/dataset/code_test/test_result/6basins_210.csv'
     # basin_ids = ['01030500', '01013500', '01031500', '01052500', '01054200', '01055000']
     "few shot retrain"
-    # global_model_name = 'D:\河海大学\研究课题\研究课题\实验相关\PSGD\Parallel-SGD\dataset\code_test\hydro_lstm_test\MODEL-fed_hydro_6basins_t30_210-N(0).model'
+    # global_model_name = 'D:\ \研究课题\研究课题\实验相关\PSGD\Parallel-SGD\dataset\code_test\hydro_lstm_test\MODEL-fed_hydro_6basins_t30_210-N(0).model'
     # # # save_csv(basin_ids, save_path, global_model_name)
     # # model_retrain(global_model_name, '01030500', 10)
     # nse, rmse, mae = model_few_shot_retrain(global_model_name, '01030500', 10)
@@ -1100,7 +1100,7 @@ if __name__ == '__main__':
 
 
     """对比实验3"""
-    # global_fed_model = "D:\\河海大学\\研究课题\\研究课题\\实验相关\\PSGD\\Parallel-SGD\\dataset\\code_test\\" \
+    # global_fed_model = "D:\\ \\研究课题\\研究课题\\实验相关\\PSGD\\Parallel-SGD\\dataset\\code_test\\" \
     #                    "hydro_lstm_test\\"
     # scene_num = 8
     # # in_basin_ids = ['01030500']
@@ -1161,7 +1161,7 @@ if __name__ == '__main__':
     # gen_n_basins_fed_model_bar_chart(num_list1, num_list2, num_list3, flag=3)
 
 
-    # global_model_name = 'D:\\河海大学\\研究课题\\研究课题\\实验相关\\PSGD\\Parallel-SGD\\dataset\\code_test\\' \
+    # global_model_name = 'D:\\ \\研究课题\\研究课题\\实验相关\\PSGD\\Parallel-SGD\\dataset\\code_test\\' \
     #                     'hydro_lstm_test\\MODEL-fed_hydro_6basins_t30_210-N(0).model'
     # model_retrain(global_model_name, '01013500', 5)
 
