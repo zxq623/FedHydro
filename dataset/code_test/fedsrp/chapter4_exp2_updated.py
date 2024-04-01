@@ -1,7 +1,7 @@
 import sys
 sys.path.append("/home/FedHydro/")
 
-from dataset.code_test.hydro_lstm_test.save_script_ import cal_nse_rmse_mae
+from dataset.code_test.hydro_lstm_test.save_script_ import cal_nse_rmse_mae, cal_nse_rmse_rae
 from dataset.code_test.fedsrp.chapter4_exp2 import get_merge_data, get_date_range, get_sparse_data, train_test_data, mutil_fune, transfer_a, transfer_b, fed_hydro
 import pandas as pd
 import nn
@@ -127,7 +127,7 @@ def local_lstm(basin_id, test_date, local_basic_model_name, single_basin_data, t
     model = train_local_lstm(local_basic_model, single_basin_data, epoch, batch_size)
     predict_y = model.predict(test_x)
     predict_y = single_ds_test.local_rescale(predict_y, variable='output')
-    nse, rmse, mae = cal_nse_rmse_mae(test_y, predict_y)
+    nse, rmse, mae = (test_y, predict_y)
     model.save('/home/FedHydro/dataset/code_test/fedsrp/models/local_BLSTM'+str(basin_id)+'_2years.model')
     print("Local_BLSTM, basin:", basin_id, ",date:", test_date, ",nse:", nse)
     return model
@@ -143,7 +143,7 @@ def mk_pic_test(basin_id, the_date_range, model_path):
     model = fed_srp_model
     predict_y = model.predict(val_x)
     predict_y = ds_val.local_rescale(predict_y, variable='output')
-    nse, rmse, mae = cal_nse_rmse_mae(val_y, predict_y)
+    nse, rmse, mae = (val_y, predict_y)
     print('basin:', basin_id)
     print(len(val_y))
     print('nse:', nse)
@@ -197,7 +197,7 @@ def generate_compare_model():
         for model in model_list:
             predict_y = model.predict(val_x)
             predict_y = ds_val.local_rescale(predict_y, variable='output')
-            nse, rmse, mae = cal_nse_rmse_mae(val_y, predict_y)
+            nse, rmse, mae = (val_y, predict_y)
             nse_list.append(nse)
             rmse_list.append(rmse)
             mae_list.append(mae)
@@ -251,7 +251,7 @@ def generate_compare_model_S2():
         for model in model_list:
             predict_y = model.predict(test_x)
             predict_y = ds_test.local_rescale(predict_y, variable='output')
-            nse, rmse, mae = cal_nse_rmse_mae(test_y, predict_y)
+            nse, rmse, mae = (test_y, predict_y)
             nse_list.append(nse)
             rmse_list.append(rmse)
             mae_list.append(mae)
@@ -272,7 +272,7 @@ def fed_srp_model_test():
         model = nn.model.SequentialModel.load(fed_fomo_path)
         predict_y = model.predict(test_x)
         predict_y = ds_test.local_rescale(predict_y, variable='output')
-        nse, rmse, mae = cal_nse_rmse_mae(test_y, predict_y)
+        nse, rmse, mae = (test_y, predict_y)
         print("basin:", basin, "nse:", nse)
 
 
@@ -290,7 +290,7 @@ def fed_srp_model_test2():
         model.fit(x=single_basin_data[0], label=single_basin_data[1], batch_size=64, epoch=3)
         predict_y = model.predict(test_x)
         predict_y = ds_test.local_rescale(predict_y, variable='output')
-        nse, rmse, mae = cal_nse_rmse_mae(test_y, predict_y)
+        nse, rmse, mae = (test_y, predict_y)
         print("basin:", basin, "nse:", nse)
 
 
@@ -460,7 +460,7 @@ def compare_model(basin_id, the_date_range):
     for model in model_list:
         predict_y = model.predict(val_x)
         predict_y = ds_val.local_rescale(predict_y, variable='output')
-        nse, rmse, mae = cal_nse_rmse_mae(val_y, predict_y)
+        nse, rmse, mae = (val_y, predict_y)
         nse_list.append(nse)
         rmse_list.append(rmse)
         mae_list.append(mae)
@@ -479,7 +479,7 @@ def mk_pic(basin_id, the_date_range, model_path):
     predict_y = model.predict(val_x)
     print(type(predict_y))
     predict_y = ds_val.local_rescale(predict_y, variable='output')
-    nse, rmse, mae = cal_nse_rmse_mae(val_y, predict_y)
+    nse, rmse, mae = (val_y, predict_y)
     print('basin:', basin_id)
     print('nse:', nse)
     width = 1
@@ -528,7 +528,7 @@ def generalization(basin_id, the_date_range):
     for model in model_list:
         predict_y = model.predict(val_x)
         predict_y = ds_val.local_rescale(predict_y, variable='output')
-        nse, rmse, mae = cal_nse_rmse_mae(val_y, predict_y)
+        nse, rmse, mae = (val_y, predict_y)
         nse_list.append(nse)
         rmse_list.append(rmse)
         mae_list.append(mae)
