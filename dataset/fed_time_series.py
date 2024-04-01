@@ -14,7 +14,7 @@ class TimeSeries(IFedDataset):
     def __init__(self, check_sum=None):
         # 路径写成这样是因为是在主程序调用当前类
         # self.path = './dataset/series_data/'
-        self.path = 'D:/河海大学/研究课题/研究课题/实验相关/PSGD/PSGD-0515/Parallel-SGD-0515/dataset/series_data'
+        self.path = 'D:/ /研究课题/研究课题/实验相关/PSGD/PSGD-0515/Parallel-SGD-0515/dataset/series_data'
         super().__init__(check_sum)
 
     def __repr__(self):
