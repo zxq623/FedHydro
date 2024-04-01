@@ -5,8 +5,8 @@ import nn
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
-x_train = np.loadtxt('D:/河海大学/研究课题/水文预报/课题实验/Parallel-SGD/lstm_hydro_test/hydro_samples/01022500_x_train.txt', delimiter=' ').reshape((-1, 30, 5))
-y_train = np.loadtxt('D:/河海大学/研究课题/水文预报/课题实验/Parallel-SGD/lstm_hydro_test/hydro_samples/01022500_y_train.txt', delimiter=' ').reshape((-1, 1))
+x_train = np.loadtxt('D:/ /研究课题/水文预报/课题实验/Parallel-SGD/lstm_hydro_test/hydro_samples/01022500_x_train.txt', delimiter=' ').reshape((-1, 30, 5))
+y_train = np.loadtxt('D:/ /研究课题/水文预报/课题实验/Parallel-SGD/lstm_hydro_test/hydro_samples/01022500_y_train.txt', delimiter=' ').reshape((-1, 1))
 
 model = nn.model.SequentialModel()
 model.add(nn.layer.LSTM(n_in=5, units=20, nb_seq=30))
