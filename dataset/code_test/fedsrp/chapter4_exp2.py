@@ -140,7 +140,7 @@ def train_global_model_with_sparse(global_epoch, global_batch_size, block_ids, s
 
 
 # def train_global_model(global_epoch, global_batch_size, block_ids, sparse_train_x, sparse_train_y):
-#     data_path = "D:\\河海大学\\研究课题\\研究课题\\实验相关\\PSGD\\Parallel-SGD\\dataset\\code_test\\fed_fomo\\data"
+#     data_path = "D:\\ \\研究课题\\研究课题\\实验相关\\PSGD\\Parallel-SGD\\dataset\\code_test\\fed_fomo\\data"
 #     unit_code = "01"
 #     hydro_data = HydroDataMeta(data_path)
 #     node_count = len(block_ids)
