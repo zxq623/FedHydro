@@ -67,7 +67,7 @@ def model_retrain(global_model_name, basin_id, epoch):
 
 # 模型再测试记录
 def gen_retrain_model(global_model_name, basin_id, epoch):
-    path = 'D:/河海大学/研究课题/水文预报/课题实验/Parallel-SGD/dataset/code_test/hydro_lstm_test/fed_model_retrain/'
+    path = 'D:/ /研究课题/水文预报/课题实验/Parallel-SGD/dataset/code_test/hydro_lstm_test/fed_model_retrain/'
     getHydroData = GetHydroData(basin_id, sequence_length)
     train_x, train_y, val_x, val_y, test_x, test_y = getHydroData.get_data()
     model = nn.model.Model.load(global_model_name)
@@ -86,7 +86,7 @@ def save_csv(basin_ids, save_path, global_model_name):
     # 写入列表头
     csv_writer.writerow(["Basin Id", "  ", "NSE", "RMSE", "MAE"])
     for basin_id in basin_ids:
-        single_model_name = 'D:/河海大学/研究课题/水文预报/课题实验/Parallel-SGD/dataset/code_test/' \
+        single_model_name = 'D:/ /研究课题/水文预报/课题实验/Parallel-SGD/dataset/code_test/' \
                             'single_model/lstm_hydro_'+str(basin_id)+'.model'
 
         csv_writer.writerow([str(basin_id), "", "", "", ""])
@@ -105,7 +105,7 @@ def save_csv(basin_ids, save_path, global_model_name):
 
 
 def gen_fig_res(basin_ids):
-    path = 'D:/河海大学/研究课题/水文预报/课题实验/Parallel-SGD/dataset/code_test/hydro_lstm_test/'
+    path = 'D:/ /研究课题/水文预报/课题实验/Parallel-SGD/dataset/code_test/hydro_lstm_test/'
     i = 1
     fig, axes = plt.subplot(3, 2)  # 2行1列，第一张图
     for basin_id in basin_ids:
@@ -168,7 +168,7 @@ def gen_single_basin_pred(basin_id):
     }
     plt.rcParams.update(config)
 
-    path = 'D:/河海大学/研究课题/水文预报/课题实验/Parallel-SGD/dataset/code_test/hydro_lstm_test/'
+    path = 'D:/ /研究课题/水文预报/课题实验/Parallel-SGD/dataset/code_test/hydro_lstm_test/'
     getHydroData = GetHydroData(basin_id, sequence_length)
     train_x, train_y, val_x, val_y, test_x, test_y = getHydroData.get_data()
     single_lstm_model = nn.model.Model.load(path + 'single_lstm_model/lstm_hydro_' + str(basin_id) + '.model')
@@ -239,7 +239,7 @@ def gen_single_basin_pred(basin_id):
 
 if __name__ == '__main__':
 
-    # f = open('D:/河海大学/研究课题/水文预报/课题实验/Parallel-SGD/dataset/code_test
+    # f = open('D:/ /研究课题/水文预报/课题实验/Parallel-SGD/dataset/code_test
     # /test_result/6basins_210.csv', 'w', encoding='utf-8', newline="")
     # csv_writer = csv.writer(f)
     # csv_writer.writerow(["basin_id", "  ", "NSE", "RMSE", "MAE"])
@@ -254,9 +254,9 @@ if __name__ == '__main__':
     # print(RMSE)
     # print(MAE)
     # print(MAPE)
-    save_path = 'D:/河海大学/研究课题/水文预报/课题实验/Parallel-SGD/dataset/code_test/test_result/6basins_210.csv'
+    save_path = 'D:/ /研究课题/水文预报/课题实验/Parallel-SGD/dataset/code_test/test_result/6basins_210.csv'
     basin_ids = ['01030500', '01013500', '01031500', '01052500', '01054200', '01055000']
-    global_model_name = 'D:/河海大学/研究课题/水文预报/课题实验/Parallel-SGD/dataset/code_test/MODEL-fed_hydro_6basins_t30_210-N(0).model'
+    global_model_name = 'D:/ /研究课题/水文预报/课题实验/Parallel-SGD/dataset/code_test/MODEL-fed_hydro_6basins_t30_210-N(0).model'
     # save_csv(basin_ids, save_path, global_model_name)
     # gen_retrain_model(global_model_name, '01030500', 1)
     # for basin_id in basin_ids:
