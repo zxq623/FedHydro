@@ -24,7 +24,7 @@ dropout_rate = 0  # Dropout rate of the final fully connected Layer [0.0, 1.0]
 learning_rate = 0.001  # Learning rate used to update the weights
 sequence_length = 30  # Length of the meteorological record provided to the network
 
-path = 'D:/河海大学/研究课题/水文预报/课题实验/Parallel-SGD/dataset/series_data/'
+path = 'D:/ /研究课题/水文预报/课题实验/Parallel-SGD/dataset/series_data/'
 start_date = pd.to_datetime("1980-10-01", format="%Y-%m-%d")
 end_date = pd.to_datetime("1995-09-30", format="%Y-%m-%d")
 ds_train = CamelsTXT(basin, seq_length=sequence_length, period="train", dates=[start_date, end_date])
@@ -51,7 +51,7 @@ ds_test = CamelsTXT(basin, seq_length=sequence_length, period="eval", dates=[sta
 # test_y = np.asarray(ds_test.y)
 
 
-path = 'D:/河海大学/研究课题/水文预报/课题实验/Parallel-SGD/dataset/series_data/'
+path = 'D:/ /研究课题/水文预报/课题实验/Parallel-SGD/dataset/series_data/'
 train_x, train_y = load_data(path, 'train')
 test_x, test_y = load_data(path, 'test')
 model = nn.model.SequentialModel(input_shape=(-1, train_x.shape[1], train_x.shape[2]))
