@@ -5,7 +5,7 @@ from dataset.code_test.fedsrp.mutil_fune import train_mutil_fune
 # 此处的为旧版本，fedhydro其实为FedFRP
 from dataset.code_test.fedsrp.fedhydro import train_fedhydro
 from dataset.code_test.fedsrp.transfer import tl_a_fune, tl_b_fune
-from dataset.code_test.hydro_lstm_test.save_script_ import cal_nse_rmse_mae
+from dataset.code_test.hydro_lstm_test.save_script_ import cal_nse_rmse_mae, cal_nse_rmse_rae
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
