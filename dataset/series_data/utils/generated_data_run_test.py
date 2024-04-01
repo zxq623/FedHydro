@@ -32,7 +32,7 @@ getHydroData = GetHydroData(basin, sequence_length)
 train_x, train_y = load_data(path, 'train')
 test_x, test_y = load_data(path, 'test')
 
-model_path = 'D:\\河海大学\\研究课题\\研究课题\\实验相关\\PSGD\\Parallel-SGD' \
+model_path = 'D:\\ \\研究课题\\研究课题\\实验相关\\PSGD\\Parallel-SGD' \
              '\\dataset\\code_test\\MODEL-fed_hydro_3basins-N(0).model'
 model = nn.model.SequentialModel.load(model_path)
 loss_history = model.fit(train_x, train_y, epoch=10,  batch_size=256)
