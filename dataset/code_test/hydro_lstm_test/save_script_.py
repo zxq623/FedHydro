@@ -4,6 +4,7 @@ from pylab import mpl, text
 from nn.utils.nse_util import calc_nse
 from nn.utils.rmse_util import cal_rmse
 from nn.utils.mae_util import cal_mae
+from nn.utils.mae_util import cal_rae
 from utils.constants import model_path, model_path2
 from dataset.series_data.utils.generate_data import get_basin_ids
 import csv
@@ -630,6 +631,17 @@ def cal_nse_rmse_mae(test_y, predict_y):
     rmse = cal_rmse(test_y, predict_y)
     mae = cal_mae(test_y, predict_y)
     return nse, rmse, mae
+
+
+def cal_nse_rmse_rae(test_y, predict_y):
+    """计算nse,rmse,rae"""
+    # 计算NSE
+    nse = calc_nse(test_y, predict_y)
+    # 计算RMSE
+    rmse = cal_rmse(test_y, predict_y)
+    # 计算RAE
+    rae = cal_rae(test_y, predict_y)
+    return nse, rmse, rae
 
 
 def gen_4units_model_result(unit_code, node_count, fed_model_name, single_model_path):
