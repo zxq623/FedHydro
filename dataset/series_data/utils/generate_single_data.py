@@ -8,7 +8,7 @@ class GenerateData:
     """产生多个流域数据合并版本数据集"""
     def __init__(self, batch_size, basin_id, data_range, time_step, input_dim):
         # self.path = './dataset/series_data/'
-        self.path = 'D:/河海大学/研究课题/水文预报/课题实验/Parallel-SGD/dataset/series_data/'
+        self.path = 'D:/ /研究课题/水文预报/课题实验/Parallel-SGD/dataset/series_data/'
         self.__batch_size = batch_size
         self.__basin_id = basin_id
         self.__data_range = data_range
@@ -67,7 +67,7 @@ if __name__ == '__main__':
         # block_size = 256
         hydroSingleDataSet = GenerateData(batch_size=batch_size, basin_id=basin_id, data_range=date_range, time_step=time_step, input_dim=5)
         train_x, train_y, test_x, test_y = hydroSingleDataSet.generate()
-        path = 'D:\\河海大学\\研究课题\\水文预报\\课题实验\\Parallel-SGD\\dataset\\series_data\\01'
+        path = 'D:\\ \\研究课题\\水文预报\\课题实验\\Parallel-SGD\\dataset\\series_data\\01'
         train_path_x = os.path.join(path, str(basin_id)+'\\train_'+str(basin_id)+'_x.txt')
         train_path_y = os.path.join(path, str(basin_id)+'\\train_'+str(basin_id)+'_y.txt')
         test_path_x = os.path.join(path, str(basin_id)+'\\test_'+str(basin_id)+'_x.txt')
