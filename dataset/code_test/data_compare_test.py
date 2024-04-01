@@ -15,7 +15,7 @@ def load_core(path, basin_id, kind='train'):
 
 def load_basin_data(block_size, basin_id):
     # 单个节点的数据01030500
-    path = 'D:\\河海大学\\研究课题\\水文预报\\课题实验\\Parallel-SGD\\dataset\\series_data\\01'
+    path = 'D:\\ \\研究课题\\水文预报\\课题实验\\Parallel-SGD\\dataset\\series_data\\01'
     path = os.path.join(path, str(basin_id))
     block_size = block_size
     single_train_x, single_train_y = load_core(path, basin_id, 'train')
