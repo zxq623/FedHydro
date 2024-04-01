@@ -8,7 +8,7 @@ from dataset.code_test.utils_test.get_hydro_data import GetHydroData
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 # Training 01
-file_path = 'D:/河海大学/研究课题/水文预报/课题实验/Parallel-SGD/dataset/series_data/'
+file_path = 'D:/ /研究课题/水文预报/课题实验/Parallel-SGD/dataset/series_data/'
 # basin = '01030500'  # can be changed to any 8-digit basin id contained in the CAMELS 01 set
 # basin = '01013500'  # can be changed to any 8-digit basin id contained in the CAMELS 01 set
 # basin = '01031500'  # can be changed to any 8-digit basin id contained in the CAMELS 01 set
